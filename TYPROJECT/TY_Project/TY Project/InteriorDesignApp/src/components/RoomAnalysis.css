@@ -1,0 +1,287 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f5f0;
+  color: #4b3f32;
+}
+
+
+
+
+/* Main Content (Beige Theme) */
+
+
+.room-analysis-container {
+  min-height: 100vh;
+  width: 100vw;
+  margin:80px auto;
+  background: linear-gradient(135deg, #f9f5f0 0%, #f0e6da 100%);
+  overflow-x: hidden;
+  padding: 2rem 1rem;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3a2e24;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 3px rgba(139, 116, 85, 0.2);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #6b5e50;
+}
+
+/* Main Card */
+.main-card {
+  background: #fffdf8;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(139, 116, 85, 0.2);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Upload Section */
+.upload-section {
+  margin-bottom: 2rem;
+}
+
+.upload-label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3a2e24;
+  margin-bottom: 0.75rem;
+}
+
+.file-input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 2px dashed #d8c3a5;
+  border-radius: 12px;
+  background-color: #fffaf4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-input:hover {
+  border-color: #b79b75;
+  background-color: #fff4e6;
+}
+
+.file-input::file-selector-button {
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #d8b384 0%, #b48a60 100%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.file-input::file-selector-button:hover {
+  transform: scale(1.05);
+}
+
+/* Image Preview */
+.image-preview {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(100, 80, 60, 0.2);
+  object-fit: contain;
+  image-rendering: crisp-edges;
+  transition: transform 0.3s ease-in-out;
+}
+
+.preview-image:hover {
+  transform: scale(1.02);
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Analyze Button */
+.btn-analyze {
+  background: linear-gradient(135deg, #2c1d08 0%, #5a3715 100%);
+  color: white;
+}
+
+.btn-analyze:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(163, 131, 96, 0.3);
+}
+
+/* Generate Button  */
+.btn-generate {
+  background: linear-gradient(135deg, #2c1d08 0%, #5a3715 100%);
+  color: white;
+}
+
+.btn-generate:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(211, 155, 134, 0.3);
+}
+
+/* Analysis Card */
+.analysis-card {
+  background: #fffdf8;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(139, 116, 85, 0.2);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #3a2e24;
+  margin-bottom: 1.5rem;
+  border-bottom: 3px solid #b79b75;
+  padding-bottom: 0.75rem;
+}
+
+.analysis-content {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #5a4b3a;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .room-analysis-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .main-card,
+  .analysis-card {
+    padding: 1.5rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .analysis-content {
+    font-size: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .main-card,
+  .analysis-card {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+
+  .file-input {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    min-width: 150px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+
+  .preview-image {
+    max-height: 300px;
+  }
+}

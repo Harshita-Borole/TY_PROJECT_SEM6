@@ -1,0 +1,12 @@
+flask
+flask-sqlalchemy
+flask-cors
+python-dotenv
+cloudinary
+Pillow
+colorthief
+requests
+google-generativeai
+markdown
+sqlalchemy
+werkzeug

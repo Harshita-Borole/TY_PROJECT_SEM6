@@ -1,0 +1,125 @@
+/* Recommendation Section - Beige Theme (Matching RoomInput) */
+.recommendation-container {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff8f0 0%, #fff3e6 100%);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #5a3d2b; /* dark warm beige */
+  font-weight: 700;
+}
+
+.no-data {
+  color: #c27c5f; /* warm reddish-beige */
+  font-size: 18px;
+}
+
+/* GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 25px;
+}
+
+/* CARD */
+.product-card {
+  border-radius: 20px;
+  padding: 25px;
+  background: #fff4e6; /* soft beige card */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* IMAGE */
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.product-card h3 {
+  margin: 10px 0 8px;
+  font-size: 20px;
+  color: #5a3d2b;
+  font-weight: 600;
+}
+
+.category {
+  color: #8b6f5b;
+  font-size: 14px;
+}
+
+.size {
+  font-weight: bold;
+  color: #5a3d2b;
+  font-size: 14px;
+}
+
+/* Recommendation.css */
+
+/* Add spacing for the back/change button */
+.back-btn {
+  margin-top: 30px;   /* space above the button */
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #c27c5f; /* match your beige theme */
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #9f5336;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(159, 83, 54, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .product-card img {
+    height: 160px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .product-card img {
+    height: 140px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .product-card h3 {
+    font-size: 16px;
+  }
+}

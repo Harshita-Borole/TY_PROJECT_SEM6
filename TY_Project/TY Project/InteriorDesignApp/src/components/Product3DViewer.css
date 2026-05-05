@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.p3d-page {
+  padding: 24px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background: #f8fafc;
+}
+
+.p3d-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.p3d-sub {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.p3d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.p3d-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.p3d-card:hover {
+  transform: translateY(-4px);
+}
+
+.p3d-card--active {
+  border-color: #5e35b1;
+}
+
+.p3d-img-box {
+  width: 100%;
+  height: 220px;
+  background: #f1f5f9;
+  overflow: hidden;
+  position: relative;
+}
+
+.p3d-active-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #5e35b1;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.p3d-card-body {
+  padding: 16px;
+}
+
+.p3d-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.p3d-desc {
+  color: #64748b;
+  margin: 8px 0 16px;
+}
+
+.p3d-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #5e35b1;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.p3d-btn--close {
+  background: #111827;
+}
+
+.p3d-viewer-box {
+  margin-top: 30px;
+}
+
+.p3d-viewer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.p3d-viewer-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.p3d-close-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.p3d-room-canvas {
+  width: 100%;
+  height: 550px;   /* VERY IMPORTANT */
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f8fafc;
+}

@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.p3d-page {
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  background: #f8fafc;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.p3d-header { text-align: center; margin-bottom: 16px; }
+.p3d-title  { font-size: 22px; font-weight: 800; color: #1e293b; margin: 0 0 5px; }
+.p3d-sub    { font-size: 13.5px; color: #64748b; margin: 0; }
+
+/* ── Room bar ────────────────────────────────────────────────────────────── */
+.room-bar {
+  background: #ede9fe;
+  border: 1.5px solid #c4b5fd;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.room-bar-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 1;
+}
+.room-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #fff;
+  border: 1.5px solid #c4b5fd;
+  border-radius: 999px;
+  padding: 4px 10px 4px 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #5e35b1;
+}
+.room-pill-x {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.12s;
+}
+.room-pill-x:hover { color: #b71c1c; }
+
+.room-bar-btns { display: flex; gap: 8px; flex-shrink: 0; }
+
+.btn-open {
+  background: #5e35b1;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+.btn-open:hover { background: #4527a0; }
+
+.btn-clear {
+  background: #fff;
+  color: #b71c1c;
+  border: 1.5px solid #fca5a5;
+  padding: 7px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+}
+.btn-clear:hover { background: #fef2f2; }
+
+/* ── Catalog label ───────────────────────────────────────────────────────── */
+.catalog-label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 12px;
+}
+
+/* ── Grid ────────────────────────────────────────────────────────────────── */
+.p3d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* ── Card ────────────────────────────────────────────────────────────────── */
+.p3d-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+}
+.p3d-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+.p3d-card--added { border-color: #7c3aed; }
+
+/* ── GLB preview box (same class as your old code p3d-img-box) ───────────── */
+.p3d-img-box {
+  position: relative;
+  width: 100%;
+  height: 200px;          /* tall enough to show 3D model clearly */
+  overflow: hidden;
+  border-radius: 0;
+}
+
+/* Count badge over the preview */
+.p3d-count-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #5e35b1;
+  color: #fff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-family: 'Nunito', sans-serif;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ── Card body ───────────────────────────────────────────────────────────── */
+.p3d-card-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+.p3d-name { font-size: 14.5px; font-weight: 800; color: #1e293b; margin: 0; }
+.p3d-desc { font-size: 12px; color: #64748b; margin: 0; line-height: 1.4; }
+
+/* ── Add button ──────────────────────────────────────────────────────────── */
+.p3d-add-btn {
+  width: 100%;
+  padding: 9px 0;
+  border: none;
+  border-radius: 9px;
+  background: #5e35b1;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  margin-top: auto;
+  transition: background 0.14s, transform 0.1s;
+}
+.p3d-add-btn:hover  { background: #4527a0; transform: translateY(-1px); }
+.p3d-add-btn:active { transform: scale(0.97); }
+
+/* ── Room section ────────────────────────────────────────────────────────── */
+.room-section {
+  margin-top: 4px;
+  border-radius: 18px;
+  overflow: hidden;
+  animation: fadeUp 0.24s ease;
+}
+
+/* ── Loading ─────────────────────────────────────────────────────────────── */
+.room-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 16px;
+  background: #f8fafc;
+  border-radius: 18px;
+  border: 2px solid #e2e8f0;
+  font-size: 15px;
+  color: #6b7280;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+.room-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #e0e4f0;
+  border-top-color: #5e35b1;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+/* ── Crash fallback ──────────────────────────────────────────────────────── */
+.p3d-crash {
+  background: #fef2f2;
+  border: 1.5px solid #fca5a5;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #b91c1c;
+  font-family: 'Nunito', sans-serif;
+}
+.p3d-crash button {
+  margin-top: 10px;
+  background: #b91c1c;
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+}
+
+@keyframes spin   { to { transform: rotate(360deg); } }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .p3d-grid    { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .p3d-page    { padding: 12px; }
+  .p3d-img-box { height: 140px; }
+}

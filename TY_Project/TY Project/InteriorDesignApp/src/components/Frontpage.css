@@ -1,0 +1,85 @@
+/* ── Frontpage wraps navbar + hero together ──────────────────────────────── */
+.frontpage-container {
+  position: relative;
+  width: 100%;
+  /* Full viewport height — navbar is inside this container, image fills rest */
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Background image — sits behind overlay ──────────────────────────────── */
+.frontpage-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.6);
+  /* image goes behind navbar and overlay */
+  z-index: 0;
+}
+
+/* ── Overlay — centred text + button ─────────────────────────────────────── */
+.frontpage-overlay {
+  position: absolute;
+  /* Start below navbar height so text is centred in the visible image area */
+  top: 60px; /* match your navbar height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  z-index: 2;
+}
+
+.frontpage-overlay h1 {
+  font-size: clamp(30px, 5vw, 60px);
+  font-weight: 800;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.4);
+}
+
+.frontpage-overlay p {
+  font-size: clamp(14px, 2vw, 20px);
+  margin-bottom: 28px;
+  opacity: 0.9;
+}
+
+/* ── Get Started button ──────────────────────────────────────────────────── */
+.dashboard-btn {
+  margin-top: 10px;
+  padding: 12px 32px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff7f50;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.15s;
+  box-shadow: 0 4px 16px rgba(255,127,80,0.35);
+  z-index: 2;
+}
+
+.dashboard-btn:hover {
+  background-color: #ff6333;
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .dashboard-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}

@@ -1,0 +1,234 @@
+
+
+/* Base Section */
+.contact-section {
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #fff8f0 0%, #fff3e6 100%);
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Headings */
+.contact-section h2 {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: #5a3d2b; 
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin-bottom: 45px;
+  color: #8b6f5b;
+  text-align: center;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* Container Layout */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 50px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* Shared Card Style */
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 320px;
+  background: #fff4e6;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Card hover effect */
+.contact-info:hover,
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Info */
+.contact-info h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #6b4f3f;
+}
+
+.contact-info p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #7a5d4b;
+  line-height: 1.5;
+}
+
+.contact-info a {
+  color: #c27c5f;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #a45f42; 
+}
+
+/* Social Links with Icons */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #7a5d4b;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.social-links a:hover {
+  background-color: rgba(194, 124, 95, 0.1);
+  transform: translateX(5px);
+}
+
+.social-links a svg {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover svg {
+  transform: scale(1.15);
+}
+
+/* Individual brand colors for icons */
+.social-links a:nth-child(1) svg {
+  color: #0077b5; 
+}
+
+.social-links a:nth-child(2) svg {
+  color: #E4405F; 
+}
+
+.social-links a:nth-child(3) svg {
+  color: #4285F4; 
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1px solid #e0cfc0;
+  border-radius: 12px;
+  background: #fff9f3;
+  color: #5a3d2b;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c27c5f;
+  box-shadow: 0 0 12px rgba(194, 124, 95, 0.3);
+  background: #fff7ef;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Button Styling */
+.contact-form button {
+  width: 190px;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #c27c5f;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.contact-form button:hover {
+  background-color: #9f5336; 
+  box-shadow: 0 8px 20px rgba(159, 83, 54, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .contact-form,
+  .contact-info {
+    max-width: 95%;
+  }
+
+  .contact-form button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+  }
+
+  .social-links {
+    align-items: flex-start;
+  }
+}

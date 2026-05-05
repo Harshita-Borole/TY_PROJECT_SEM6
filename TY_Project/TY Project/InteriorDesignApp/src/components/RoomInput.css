@@ -1,0 +1,98 @@
+/* RoomInput.css - Beige Theme */
+
+/* Container */
+.room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  width: 100%;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #fff8f0 0%, #fff3e6 100%);
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Title */
+.room-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  color: #5a3d2b;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Form Card */
+.room-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  background: #fff4e6;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+}
+
+/* Form hover effect */
+.room-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs */
+.room-form input {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #e0cfc0;
+  font-size: 16px;
+  background: #fff9f3;
+  color: #5a3d2b;
+  transition: all 0.3s ease;
+}
+
+.room-form input:focus {
+  outline: none;
+  border-color: #c27c5f;
+  box-shadow: 0 0 12px rgba(194, 124, 95, 0.3);
+  background: #fff7ef;
+}
+
+/* Button */
+.room-form button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #c27c5f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.room-form button:hover {
+  background-color: #9f5336;
+  box-shadow: 0 8px 20px rgba(159, 83, 54, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .room-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .room-title {
+    font-size: 24px;
+  }
+
+  .room-form input,
+  .room-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

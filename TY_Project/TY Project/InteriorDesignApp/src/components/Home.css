@@ -1,0 +1,148 @@
+/* ================= HOME MAIN ================= */
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f8fc, #eef2ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= INTRO ================= */
+.home-intro {
+  text-align: center;
+  max-width: 700px;
+}
+
+.home-intro h1 {
+  font-size: 48px;
+  color: #222;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.home-intro p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 35px;
+}
+
+/* ================= DASHBOARD CARD ================= */
+.dashboard-card {
+  width: 300px;
+  margin: auto;
+  padding: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ================= ROLE SECTION ================= */
+.role-section {
+  text-align: center;
+  width: 100%;
+}
+
+.role-section h2 {
+  font-size: 36px;
+  margin-bottom: 35px;
+  color: #222;
+}
+
+/* ================= ROLE CARDS ================= */
+.role-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.role-card {
+  width: 240px;
+  height: 160px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ================= BACK BUTTON ================= */
+.back-btn {
+  margin-top: 35px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #4338ca;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .home-intro h1 {
+    font-size: 34px;
+  }
+
+  .home-intro p {
+    font-size: 18px;
+  }
+
+  .dashboard-card {
+    width: 260px;
+    font-size: 20px;
+  }
+
+  .role-card {
+    width: 200px;
+    height: 140px;
+    font-size: 20px;
+  }
+  .home-main-wrapper {
+  width: 100%;
+  height: 100vh; /* Lock height to the screen */
+  overflow: hidden; /* Prevent accidental scrolling */
+}
+
+.role-selection-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+}
+
+  .role-section h2 {
+    font-size: 28px;
+  }
+}
